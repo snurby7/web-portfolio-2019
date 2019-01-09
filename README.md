@@ -1,5 +1,3 @@
-![](https://i.imgur.com/hWB1XRO.png)
-
 # My portfolio site for 2019
 
 - Playful & Colorful One-Page website with Parallax effect
