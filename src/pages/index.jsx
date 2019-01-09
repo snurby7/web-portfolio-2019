@@ -1,26 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "tailwind.macro";
-import { Parallax } from "react-spring/addons.cjs";
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { Parallax } from 'react-spring/addons.cjs';
 
 // Components
-import Layout from "../components/Layout";
-import ProjectCard from "../components/ProjectCard";
+import Layout from '../components/Layout';
+import ProjectCard from '../components/ProjectCard';
 
 // Elements
-import Inner from "../elements/Inner";
-import { Title, BigTitle, Subtitle } from "../elements/Titles";
+import Inner from '../elements/Inner';
+import { Title, BigTitle, Subtitle } from '../elements/Titles';
 
 // Views
-import Hero from "../views/Hero";
-import Projects from "../views/Projects";
-import About from "../views/About";
-import Contact from "../views/Contact";
+import Hero from '../views/Hero';
+import Projects from '../views/Projects';
+import About from '../views/About';
+import Contact from '../views/Contact';
 
-import avatar from "../images/avatar.jpg";
+import avatar from '../images/avatar.jpg';
 
+import projects from '../data-add-ons/projects';
 // Add Ons
-var projects = require("../data-add-ons/projects");
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -66,41 +66,19 @@ const Index = () => (
     <Parallax pages={5}>
       <Hero>
         <BigTitle>
-          Hi, <br /> I'm Ryan bruns.
+          Hi, <br /> I'm Ryan Bruns.
         </BigTitle>
         <Subtitle>Welcome to my portfolio!</Subtitle>
       </Hero>
       <Projects>
         <Title>Projects</Title>
         <ProjectsWrapper>
-          <ProjectCard
-            title="Freiheit"
-            link="https://www.behance.net/gallery/58937147/Freiheit"
-            bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
-          >
-            This project is my entry to Adobe's #ChallengeYourPerspective contest.
-          </ProjectCard>
-          <ProjectCard
-            title="Harry Potter"
-            link="https://www.behance.net/gallery/52915793/Harry-Potter"
-            bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-          >
-            I entered the DOCMA 2017 award with this Harry Potter inspired image.
-          </ProjectCard>
-          <ProjectCard
-            title="Tomb Raider"
-            link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-            bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-          >
-            Recreation of a Tomb Raider Wallpaper (Fan Art)
-          </ProjectCard>
-          <ProjectCard
-            title="Eagle"
-            link="https://www.behance.net/gallery/38068151/Eagle"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-          >
-            A fantasy image manipulation relocating the habitat of wild animals.
-          </ProjectCard>
+          {projects.map(project => (
+            <ProjectCard title={project.title} link={project.link} bg={project.bg}>
+              {' '}
+              {project.displayText}{' '}
+            </ProjectCard>
+          ))}
         </ProjectsWrapper>
       </Projects>
       <About>
