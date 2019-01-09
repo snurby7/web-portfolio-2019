@@ -1,26 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { Parallax } from 'react-spring/addons.cjs'
+import React from "react";
+import styled from "styled-components";
+import tw from "tailwind.macro";
+import { Parallax } from "react-spring/addons.cjs";
 
 // Components
-import Layout from '../components/Layout'
-import ProjectCard from '../components/ProjectCard'
+import Layout from "../components/Layout";
+import ProjectCard from "../components/ProjectCard";
 
 // Elements
-import Inner from '../elements/Inner'
-import { Title, BigTitle, Subtitle } from '../elements/Titles'
-
-// Add Ons
-var projects = require('../data-add-ons/projects');
+import Inner from "../elements/Inner";
+import { Title, BigTitle, Subtitle } from "../elements/Titles";
 
 // Views
-import Hero from '../views/Hero'
-import Projects from '../views/Projects'
-import About from '../views/About'
-import Contact from '../views/Contact'
+import Hero from "../views/Hero";
+import Projects from "../views/Projects";
+import About from "../views/About";
+import Contact from "../views/Contact";
 
-import avatar from '../images/avatar.jpg'
+import avatar from "../images/avatar.jpg";
+
+// Add Ons
+var projects = require("../data-add-ons/projects");
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -124,15 +124,13 @@ const Index = () => (
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            Say <a href="mailto:ryan.bruns7@gmail.com">Hi</a> or find me on other platforms:{' '}
+            <a href="https://www.github.com/snurby7">Github</a> & <a href="https://www.twitter.com/snurby7/">Twitter</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>. Made by{' '}
-          <a href="https://www.lekoarts.de">LekoArts</a>.
+          &copy; 2019 by Ryan Bruns. <a href="https://github.com/snurby7/web-portfolio-2019">Github Repository</a>.
+          Inspired by <a href="https://www.lekoarts.de">LekoArts</a>.
         </Footer>
       </Contact>
     </Parallax>
