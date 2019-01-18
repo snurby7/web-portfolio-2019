@@ -34,31 +34,31 @@ const ProjectsWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
-`
+`;
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
-`
+`;
 
 const Avatar = styled.img`
   ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto`};
-`
+`;
 
 const AboutSub = styled.span`
   ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
-`
+`;
 
 const AboutDesc = styled.p`
   ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
-`
+`;
 
 const ContactText = styled.p`
   ${tw`text-grey-light font-sans text-xl md:text-2xl lg:text-3xl`};
-`
+`;
 
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
-`
+`;
 
 const Index = () => (
   <>
@@ -84,34 +84,38 @@ const Index = () => (
       <About>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Ryan Bruns" />
           <AboutSub>
-            Sub Text Here
+            Hi there! I'm Ryan, or as my coworkers like to call me "Buns", they say the "r" is silent and spell it with
+            parentheses and everything. This is my gallery! My little slice of the internet pie. I like to always learn
+            something new and don't enjoy the same old thing day in and day out. Far cry from where was last year,
+            you'll often find me playing with some new tech to try and make my life easier.
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          About Description
-          About Description
-          About Description
-          About Description
-          About Description
+          Like I said above, I like to make my life easier, a lot of the projects I mentioned above are some highlights
+          in my attempts, some more successful than others, but with each project I took one step closer to where I
+          wanted to be. When I'm not{' '}
+          <a href="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif">tapping away at the keyboard</a> I like to do
+          anything that doesn't have a screen. I've picked up reading, who knew books could be exciting, don't tell High
+          School me!!
         </AboutDesc>
       </About>
       <Contact>
         <Inner>
-          <Title>Get in touch</Title>
+          <Title>Reach out</Title>
           <ContactText>
             Say <a href="mailto:ryan.bruns7@gmail.com">Hi</a> or find me on other platforms:{' '}
             <a href="https://www.github.com/snurby7">Github</a> & <a href="https://www.twitter.com/snurby7/">Twitter</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2019 by Ryan Bruns. <a href="https://github.com/snurby7/web-portfolio-2019">Github Repository</a>.
+          &copy; 2019 by Ryan Bruns. <a href="https://github.com/snurby7/web-portfolio-2019">Github</a>.
           Inspired by <a href="https://www.lekoarts.de">LekoArts</a>.
         </Footer>
       </Contact>
     </Parallax>
   </>
-)
+);
 
-export default Index
+export default Index;
