@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import get from 'lodash/get';
+import Helmet from 'react-helmet';
 
-import Layout from '../../components/Layout'
-import { rhythm } from '../../utils/typography'
+import Layout from '../../components/Layout';
+import { rhythm } from '../../utils/typography';
 
 class BlogIndex extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
-    )
+    );
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (

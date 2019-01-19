@@ -1,0 +1,23 @@
+.btn-active {
+  background-color: #00369F !important;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0px 12px;
+  border-width: 0;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #1D5FE2;
+  color: #f8f8f8;
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  text-decoration: none;
+  background-color: rgb(96, 137, 251);
+}

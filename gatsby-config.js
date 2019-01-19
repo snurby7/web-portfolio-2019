@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-minimal-portfolio-blog',
-    author: 'Sai Krishna',
+    title: 'Ryan Bruns',
+    author: 'Ryan Bruns',
     description:
-      'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
-    siteUrl: 'https://saikrishna.me',
+      'Portfolio showcase & blog for Ryan Bruns',
+    siteUrl: 'https://ryanbruns.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -49,13 +49,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-minimal-portfolio-blog`,
-        short_name: `gmpb`,
+        name: `bruns-portfolio-blog`,
+        short_name: `bpb`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/tab-image.png`,
       },
     },
     `gatsby-plugin-offline`,

@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-minimal-portfolio-blog",
-  "description": "GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.",
+  "name": "bruns-blogio",
+  "description": "Portfolio showcase & blog for Ryan Bruns.",
   "version": "1.0.0",
-  "author": "Sai Krishna",
-  "bugs": {
-    "url": "https://github.com/s-kris/gatsby-minimal-portfolio-blog/issues"
-  },
+  "author": "Ryan Bruns",
   "dependencies": {
     "gatsby": "^2.0.19",
     "gatsby-plugin-feed": "^2.0.8",
@@ -13,7 +10,7 @@
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-sharp": "^2.0.6",
     "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-remark-copy-linked-files": "^2.0.5",
@@ -52,7 +49,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s-kris/gatsby-minimal-portfolio-blog.git"
+    "url": "git+https://github.com/snurby7/web-portfolio-2019.git"
   },
   "scripts": {
     "dev": "gatsby develop",

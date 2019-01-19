@@ -7,7 +7,6 @@ const Header = () => {
         textAlign: 'center',
       }}
     >
-      {/* <h2>Site Title</h2> */}
     </div>
   )
 }

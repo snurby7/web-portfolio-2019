@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 // Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import 'typeface-montserrat';
+import 'typeface-merriweather';
 
-import profilePic from './../assets/images/avatar.png'
-import { rhythm } from '../utils/typography'
-import bioData from './../data/bio'
+import avatarPic from './../assets/images/avatar.jpg';
+import { rhythm } from '../utils/typography';
+import { blogTag } from './../data/bio-tag';
 
 class Bio extends React.Component {
   render() {
@@ -18,16 +18,17 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={profilePic}
-          alt={`Sai Krishna`}
+          src={avatarPic}
+          alt={`Ryan Bruns`}
           style={{
+            borderRadius: 48,
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
             width: rhythm(2),
             height: rhythm(2),
           }}
         />
-        <p>{bioData}</p>
+        <p style={{paddingTop: 10}}>{blogTag}</p>
       </div>
     )
   }

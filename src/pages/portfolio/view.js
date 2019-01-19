@@ -2,33 +2,65 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 
-import Layout from './../../components/Layout'
+import Layout from './../../components/Layout';
 
 export class view extends Component {
   render() {
-    const passedData = this.props.location.state || {
-      title: 'default title',
-      description: 'default description',
-      image: 'https://via.placeholder.com/350',
-      website: 'https://via.placeholder.com',
-    }
-    const { title, description, image, website } = passedData
+    const passedData = this.props.location.state;
+    const { title, description, image, website, chips } = passedData;
     return (
       <Layout>
         <Helmet>
-          <title>{`${title} | Sai Krishna`}</title>
+          <title>{`${title}`}</title>
         </Helmet>
         <Link to="/portfolio">&larr; back</Link>
         <h2>{title}</h2>
         <img src={image} />
         <div>
           {description}
-          <br /> <br />
+          <br />
+          <div
+            style={{
+              textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+              marginTop: 10,
+            }}
+          >
+            {chips.map((chip) => (
+              <div
+              key={chip}
+                style={{
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+                  background: 'grey',
+                  display: 'inline-block',
+                  borderRadius: 42,
+                  padding: 0,
+                  height: 36,
+                  marginRight: 10,
+                  boxShadow:
+                    '0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)',
+                  transition: '0.2s ease-out',
+                }}
+              >
+                <span
+                  style={{
+                    display: 'inline-block',
+                    color: 'white',
+                    weight: '400',
+                    fontSize: '16px',
+                    float: 'left',
+                    padding: '4px 10px',
+                  }}
+                >
+                  {chip}
+                </span>
+              </div>
+            ))}
+          </div>
+          <br />
           {website && (
             <div>
-              Website:{' '}
               <a href={website} target="_new">
-                {website}
+                Find out more!
               </a>
             </div>
           )}
