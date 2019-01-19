@@ -1,52 +1,71 @@
-const config = require('./config/website')
-
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-
 module.exports = {
-  /* General Information */
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    title: 'gatsby-minimal-portfolio-blog',
+    author: 'Sai Krishna',
+    description:
+      'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
+    siteUrl: 'https://saikrishna.me',
   },
-  /* Plugins */
+  pathPrefix: '/',
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images/`,
-        name: 'images',
+        path: `${__dirname}/src/pages`,
+        name: 'blog',
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icons: [
+        plugins: [
           {
-            src: '/favicons/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
           },
           {
-            src: '/favicons/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
         ],
       },
     },
-    /* Must be placed at the end */
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-minimal-portfolio-blog`,
+        short_name: `gmpb`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/assets/gatsby-icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }
