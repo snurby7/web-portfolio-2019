@@ -13,6 +13,7 @@ const projects =  [
       I use YNAB for all my budgetting needs, but I was missing some data I wanted to get to easier. Using their API I was able to grab all the data they have and do my own processing on it.
     `,
     image: Insights,
+    imageTag: 'insights',
   },
   {
     title: 'Coffee Rates',
@@ -23,6 +24,7 @@ const projects =  [
       This lead me to starting this project. I thought there could be an 'untappd' style application for coffee and I'd love to create one.
     `,
     image: ComingSoon,
+    imageTag: 'comingSoon',
   },
   {
     title: 'Yo Nwps - Internal Tool',
@@ -32,7 +34,8 @@ const projects =  [
       it's like building a car with no engine, it looks good on the surface, but when it gets fire it up it's not moving or making a sound! Cue frustration!
       The future for this project is a set on Angular CLI Schematics!
     `,
-    image: Yeoman
+    image: Yeoman,
+    imageTag: 'yeoman',
   },
   {
     title: 'Health Check - Internal Tool',
@@ -42,7 +45,8 @@ const projects =  [
       to help us address the problem. The site evolved into a few rows of cards display key metrics at a glance to show the associated builds for Development and for QA testing.
       Now, this site can be found bookmarked across the team and even occasionally displayed on a TV or two around the office!
     `,
-    image: HealthCheck
+    image: HealthCheck,
+    imageTag: 'healthCheck',
   },
   {
     title: 'Lazy Fields - Internal Tool',
@@ -53,6 +57,7 @@ const projects =  [
       This was helpful in covering the last mile that 'yo nwps' just couldn't cover for me.
     `,
     image: LazyFields,
+    imageTag: 'lazyFields',
   },
   {
     title: 'Tool Box - Internal Tool',
@@ -64,6 +69,7 @@ const projects =  [
       I also have the ability to put more tools in the project and then everyone can have them from one application instead of many!
     `,
     image: ComingSoon,
+    imageTag: 'comingSoon',
   },
 ];
 

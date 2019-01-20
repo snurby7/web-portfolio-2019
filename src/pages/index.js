@@ -1,24 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import Hemlet from 'react-helmet';
-
+import Img from 'gatsby-image';
 import Layout from '../components/Layout';
-import DisplayImage from './../assets/images/ryan.jpg';
 
-class SiteIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    );
-
-    return (
-      <Layout>
+const SiteIndex = (props) => (
+  <Layout>
         <Hemlet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
+          <title>{props.data.site.siteMetadata.title}</title>
+          <meta name="description" content={props.data.site.siteMetadata.description} />
         </Hemlet>
         <p>
           Welcome! I'm Ryan, or as my coworkers like to call me <strong>"Buns"</strong>!
@@ -38,20 +28,25 @@ class SiteIndex extends React.Component {
         <p>
           Less, but better!
         </p>
-        <img src={DisplayImage} alt={siteTitle} />
+        <Img fluid={props.data.ryan.childImageSharp.fluid} alt={props.data.site.siteMetadata.title} />
       </Layout>
-    )
-  }
-}
+)
 
 export default SiteIndex
 
-export const query = graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
         description
+      }
+    }
+    ryan: file(relativePath: { eq: "ryan.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
