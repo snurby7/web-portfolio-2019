@@ -1,10 +1,10 @@
-import Insights from './../../assets/images/insights.png';
-import LazyFields from './../../assets/images/lazy-fields.png';
-import HealthCheck from './../../assets/images/health-check.png';
-import ComingSoon from './../../assets/images/coming-soon.png';
-import Yeoman from './../../assets/images/yeoman.png';
+import Insights from './../assets/images/insights.png';
+import LazyFields from './../assets/images/lazy-fields.png';
+import HealthCheck from './../assets/images/health-check.png';
+import ComingSoon from './../assets/images/coming-soon.png';
+import Yeoman from './../assets/images/yeoman.png';
 
-export default  [
+const projects =  [
   {
     title: 'Insights',
     website: 'https://github.com/snurby7/insights',
@@ -66,3 +66,5 @@ export default  [
     image: ComingSoon,
   },
 ];
+
+export default projects;

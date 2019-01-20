@@ -6,7 +6,7 @@ import 'typeface-merriweather';
 
 import avatarPic from './../assets/images/avatar.jpg';
 import { rhythm } from '../utils/typography';
-import { blogTag } from './../data/bio-tag';
+import blogTag from './../data/bio-tag';
 
 class Bio extends React.Component {
   render() {

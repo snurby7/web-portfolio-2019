@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 
-import Layout from './../../components/Layout';
+import Layout from './../../components/Layout'
 
 export class view extends Component {
   render() {
-    const passedData = this.props.location.state;
-    const { title, description, image, website, chips } = passedData;
+    const passedData = this.props.location.state
+    const { title, description, image, website, chips } = passedData || {
+      title: '',
+      description: '',
+      image: '',
+      website: '',
+      chips: [],
+    };
     return (
       <Layout>
         <Helmet>
@@ -25,9 +31,9 @@ export class view extends Component {
               marginTop: 10,
             }}
           >
-            {chips.map((chip) => (
+            {chips.map(chip => (
               <div
-              key={chip}
+                key={chip}
                 style={{
                   textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
                   background: 'grey',
