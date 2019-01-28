@@ -38,6 +38,9 @@ export class Navbar extends Component {
           <Link className="btn" activeClassName="btn btn-active" to={'/blog'}>
             Blog
           </Link>
+          <Link className="btn" activeClassName="btn btn-active" to={'/books'}>
+            Books
+          </Link>
           <Link
             className="btn"
             activeClassName="btn btn-active"
