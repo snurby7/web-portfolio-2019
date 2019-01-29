@@ -59,7 +59,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `bruns-portfolio-blog`,
-        short_name: `bpb`,
+        short_name: `Ryan's Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
