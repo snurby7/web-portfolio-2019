@@ -46,7 +46,7 @@ const PortfolioIndex = props => {
                       height: 200,
                       margin: 10,
                       backgroundSize: 'cover',
-                      backgroundPosition: 'center center'
+                      backgroundPosition: 'center center',
                     }}
                     fluid={props.data[project.imageTag].childImageSharp.fluid}
                   />

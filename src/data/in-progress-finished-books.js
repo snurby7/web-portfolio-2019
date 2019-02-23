@@ -23,7 +23,16 @@ const inProgressFinishedBooks = [
     title: `Essentialism: The Disciplined Pursuit of Less`,
     author: `Greg McKeown`,
     thoughts: ``,
-    inProgress: true
   },
+  {
+    title: `It Doesn't Have to Be Crazy at Work`,
+    author: 'Jason Fried, David Heinemeier Hansson',
+    thoughts: ``
+  },
+  {
+    title: 'Playing with FIRE (Financial Independence Retire Early): How Far Would You Go for Financial Freedom?',
+    author: 'Scott Rieckens',
+    thoughts: ''
+  }
 ];
 export default inProgressFinishedBooks;
