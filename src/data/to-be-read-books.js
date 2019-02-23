@@ -130,11 +130,7 @@ const unread = [
     author: 'Tara Brach',
     thoughts: ``
   },
-  {
-    title: `It Doesn't Have to Be Crazy at Work`,
-    author: 'Jason Fried, David Heinemeier Hansson',
-    thoughts: ``
-  },
+
   {
     title:
       'The Plant Paradox: The Hidden Dangers in "Healthy" Foods That Cause Disease and Weight Gain',
