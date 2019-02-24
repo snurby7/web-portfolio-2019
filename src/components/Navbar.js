@@ -13,37 +13,35 @@ export class Navbar extends Component {
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          justifyContent: 'center',
+          justifyContent: 'flex-end',
         }}
       >
         <div
           style={{
-            width: rhythm(24),
-            maxWidth: 350,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}
         >
-          <Link className="btn" activeClassName="btn btn-active" to={'/'}>
+          <Link className="nav-link" activeClassName="nav-link nav-link-active" to={'/'}>
             Home
           </Link>
           <Link
-            className="btn"
-            activeClassName="btn btn-active"
+            className="nav-link"
+            activeClassName="nav-link nav-link-active"
             to={'/portfolio'}
           >
             Portfolio
           </Link>
-          <Link className="btn" activeClassName="btn btn-active" to={'/blog'}>
+          <Link className="nav-link" activeClassName="nav-link nav-link-active" to={'/blog'}>
             Blog
           </Link>
-          <Link className="btn" activeClassName="btn btn-active" to={'/books'}>
+          <Link className="nav-link" activeClassName="nav-link nav-link-active" to={'/books'}>
             Books
           </Link>
           <Link
-            className="btn"
-            activeClassName="btn btn-active"
+            className="nav-link"
+            activeClassName="nav-link nav-link-active"
             to={'/contact'}
           >
             Contact

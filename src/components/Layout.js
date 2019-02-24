@@ -11,7 +11,7 @@ class Layout extends React.Component {
     const defaultStyle = {
       marginLeft: 'auto',
       marginRight: 'auto',
-      maxWidth: rhythm(32),
+      maxWidth: rhythm(48),
       padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
     }
 
@@ -24,7 +24,7 @@ class Layout extends React.Component {
         <Header />
         <Navbar />
         <br />
-        {children}
+        <div className="layout-default">{children}</div>
       </div>
     )
   }
