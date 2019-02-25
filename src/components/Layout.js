@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { rhythm } from '../utils/typography'
-import Header from '../components/Header'
 import Navbar from './Navbar'
 
 class Layout extends React.Component {
@@ -21,10 +20,9 @@ class Layout extends React.Component {
     }
     return (
       <div style={finalStyle}>
-        <Header />
         <Navbar />
         <br />
-        <div className="layout-default">{children}</div>
+        {children}
       </div>
     )
   }

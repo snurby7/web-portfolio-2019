@@ -1,3 +1,8 @@
+body {
+  background-color: #212121;
+  color: white;
+}
+
 .nav-link-active {
   text-decoration: underline;
   text-underline-position: below;
@@ -9,7 +14,7 @@
 
 .nav-link {
   padding: 0px 12px;
-  transition: background-color .3s;
+  color: #E0E0E0;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -26,5 +31,9 @@
 @media only screen and (max-width: 992px) {
   .layout-default {
     flex-direction: column;
+  }
+  .text-section {
+    text-align: center;
+    width: 100% !important;
   }
 }
