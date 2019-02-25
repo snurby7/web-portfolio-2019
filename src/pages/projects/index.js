@@ -9,7 +9,7 @@ import Img from 'gatsby-image'
 
 import '../../styles/styles.css'
 
-const PortfolioIndex = props => {
+const ProjectsIndex = props => {
   return (
     <Layout>
       <Helmet
@@ -20,9 +20,9 @@ const PortfolioIndex = props => {
             content: props.data.site.siteMetadata.description,
           },
         ]}
-        title={`Portfolio | ${props.data.site.siteMetadata.title}`}
+        title={`Projects | ${props.data.site.siteMetadata.title}`}
       />
-      <h2>Portfolio</h2>
+      <h2>Projects</h2>
       <br />
       <div
         style={{
@@ -32,14 +32,23 @@ const PortfolioIndex = props => {
         <Grid fluid>
           <Row>
             {projects.map(project => (
-              <Col xs={12} sm={12} md={6} lg={6} key={project.title}>
+              <Col xs={12} sm={8} md={6} lg={4} key={project.title}>
                 <div
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    paddingBottom: 10
                   }}
                 >
+                  <Link
+                    className="nav-link"
+                    to={'/projects/view'}
+                    state={project}
+                    key={project.title}
+                  >
+                    {project.title}
+                  </Link>
                   <Img
                     style={{
                       width: 250,
@@ -50,14 +59,6 @@ const PortfolioIndex = props => {
                     }}
                     fluid={props.data[project.imageTag].childImageSharp.fluid}
                   />
-                  <Link
-                    className="btn"
-                    to={'/portfolio/view'}
-                    state={project}
-                    key={project.title}
-                  >
-                    {project.title}
-                  </Link>
                 </div>
               </Col>
             ))}
@@ -68,7 +69,7 @@ const PortfolioIndex = props => {
   )
 }
 
-export default PortfolioIndex
+export default ProjectsIndex
 
 export const fluidImage = graphql`
   fragment fluidImage on File {

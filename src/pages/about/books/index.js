@@ -2,13 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
-import Layout from '../../components/Layout'
+import Layout from '../../../components/Layout'
 
-import toBeRead from '../../data/to-be-read-books'
-import inProgressFinished from '../../data/in-progress-finished-books';
-import BookDisplay from '../../components/BookDisplay'
+import toBeRead from '../../../data/to-be-read-books'
+import inProgressFinished from '../../../data/in-progress-finished-books';
+import BookDisplay from '../../../components/BookDisplay'
 
-const Contact = props => (
+const Books = props => (
   <Layout>
     <Helmet
       htmlAttributes={{ lang: 'en' }}
@@ -36,7 +36,7 @@ const Contact = props => (
   </Layout>
 )
 
-export default Contact
+export default Books
 
 export const query = graphql`
   query {

@@ -8,7 +8,7 @@ const projects =  [
   {
     title: 'Insights',
     website: 'https://github.com/snurby7/insights',
-    chips: ['React', 'TypeScript', 'Redux', 'Express', 'MongoDB'],
+    chips: ['React', 'TypeScript', 'OvernightJS', 'MongoDB'],
     description: `
       I use YNAB for all my budgetting needs, but I was missing some data I wanted to get to easier. Using their API I was able to grab all the data they have and do my own processing on it.
     `,
@@ -18,7 +18,7 @@ const projects =  [
   {
     title: 'Coffee Rates',
     website: 'https://github.com/snurby7/coffee-rates',
-    chips: ['React', 'TypeScript', 'Apollo', 'GraphQL', 'Jest'],
+    chips: ['React', 'TypeScript', 'OvernightJs', 'Jest'],
     description: `
       I love coffee! Which means I buy a new bag about once a week. This lead me to realize a problem, I had no way of knowing - without digging around my budget - where my favorite coffee was from.
       This lead me to starting this project. I thought there could be an 'untappd' style application for coffee and I'd love to create one.
@@ -50,7 +50,7 @@ const projects =  [
   },
   {
     title: 'Lazy Fields - Internal Tool',
-    chips: ['Angular'],
+    chips: ['Angular', 'VSTS'],
     description: `
       Lazy Fields, as the name implies, it's to help a lazy developer - we're all lazy, we just don't want to admit it - create fields.
       All I had to do was fill out a form and I was able to go from some SQL to a field and spit that out and just copy and paste that into my file and I was on my way.
