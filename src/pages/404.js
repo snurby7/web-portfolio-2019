@@ -1,37 +1,32 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react"
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 class NotFoundPage extends React.Component {
   render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO title="404: Not Found" />
         <h1>Not Found</h1>
-        <p>Welcome to a route that doesn't exist, have a bear!</p>
-        <div
-          style={{
-            width: '100%',
-            height: 0,
-            paddingBottom: '70%',
-            position: 'relative',
-          }}
-        >
-          <iframe
-            src="https://giphy.com/embed/dzaUX7CAG0Ihi"
-            width="480"
-            height="258"
-            frameBorder="0"
-            className="giphy-embed"
-            allowFullScreen
-          />
-          <p>
-            <a href="https://giphy.com/gifs/hello-hi-dzaUX7CAG0Ihi">
-              via GIPHY
-            </a>
-          </p>
-        </div>
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Layout>
     )
   }
 }
 
 export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
